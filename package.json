@@ -1,0 +1,97 @@
+{
+  "name": "@notchjs/notch",
+  "version": "0.1.14",
+  "description": "A dependency injection based web framework for Node.js",
+  "author": "Augustus Kamau",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "notchjs",
+    "notch",
+    "framework"
+  ],
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc -p tsconfig.build.json",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "lint": "eslint \"{src,tests}/**/*.ts\" --fix",
+    "test": "mocha \"tests/**/*.test.ts\"",
+    "test:dev": "mocha -w --watch-files  \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "test:cov": "nyc mocha \"tests/**/*.test.ts\" --reporter spec",
+    "prerelease": "npm run prebuild && npm run build",
+    "release": "release-it",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "18.4.3",
+    "@commitlint/config-conventional": "18.4.3",
+    "@types/chai": "4.3.11",
+    "@types/mocha": "10.0.6",
+    "@types/node": "20.10.5",
+    "@typescript-eslint/eslint-plugin": "6.15.0",
+    "@typescript-eslint/parser": "6.15.0",
+    "chai": "4.3.10",
+    "eslint": "8.56.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-simple-import-sort": "10.0.0",
+    "husky": "8.0.3",
+    "lint-staged": "15.2.0",
+    "mocha": "10.2.0",
+    "nyc": "15.1.0",
+    "prettier": "3.1.1",
+    "release-it": "17.0.1",
+    "rimraf": "5.0.5",
+    "ts-node": "10.9.1",
+    "typescript": "5.3.3"
+  },
+  "engines": {
+    "node": "^18.0.0 || >=20.0.0"
+  },
+  "homepage": "https://github.com/notchjs/notch#readme",
+  "bugs": {
+    "url": "https://github.com/notchjs/notch/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notchjs/notch.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "**/*.js",
+      "**/*.d.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text-summary",
+      "html"
+    ],
+    "sourceMap": true,
+    "instrument": true
+  },
+  "mocha": {
+    "require": [
+      "ts-node/register"
+    ],
+    "exit": true
+  }
+}

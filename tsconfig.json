@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": false,
+    "noLib": false,
+    "target": "ES2022",
+    "sourceMap": false,
+    "outDir": "./dist",
+    "rootDir": ".",
+    "skipLibCheck": true
+  }
+}
