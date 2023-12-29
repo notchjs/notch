@@ -4,4 +4,6 @@ export * from './http-adapter';
 export * from './interfaces';
 export * from './logger';
 export * from './logger-host';
+export * from './middleware';
 export * from './notch-module';
+export * from './response';
