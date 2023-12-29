@@ -5,5 +5,6 @@ export * from './interfaces';
 export * from './logger';
 export * from './logger-host';
 export * from './middleware';
+export * from './middleware-container';
 export * from './notch-module';
 export * from './response';
