@@ -23,9 +23,9 @@ export class MiddlewareContainer implements Container {
 
     if (!middleware.process) {
       throw new Error(
-        `Invalid middleware; ${stringify(
+        `Invalid middleware ${stringify(
           middleware,
-        )} does not provide 'process' or 'handle' method.`,
+        )}; does not provide 'process' or 'handle' method.`,
       );
     }
 
