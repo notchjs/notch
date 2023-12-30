@@ -1,5 +1,4 @@
 import { expect } from 'chai';
-import * as sinon from 'sinon';
 
 import { MiddlewareContainer, NotchHandlerMiddleware } from '../../src';
 import { NormalHandler } from './fixtures/normal-handler';
@@ -24,10 +23,6 @@ describe('MiddlewareContainer', () => {
     expect(container.has('service')).to.be.true;
   });
 
-  it('should return true when callable', async () => {
-    expect(container.has(sinon.spy() as any)).to.be.true;
-  });
-
   it('should return false when original container has no service', async () => {
     expect(container.has('not-a-callable')).to.be.false;
   });
@@ -36,13 +31,9 @@ describe('MiddlewareContainer', () => {
     expect(() => container.get('not-a-service')).to.throw();
   });
 
-  it('should throw when service does not define `process` method', async () => {
+  it('should throw when service does not define `process` or `handle` method', async () => {
     originContainer.set('middleware', new Date());
     expect(() => container.get('middleware')).to.throw();
-  });
-
-  it('should throw when callable does not define `process` method', async () => {
-    expect(() => container.get(sinon.spy() as any)).to.throw();
   });
 
   it('should decorate handler as middleware', async () => {
