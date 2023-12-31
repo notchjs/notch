@@ -3,6 +3,7 @@ export * from './constants';
 export * from './error-handler-host';
 export * from './error-response-generator-host';
 export * from './handler';
+export * from './hook-container';
 export * from './http-adapter';
 export * from './interfaces';
 export * from './logger';

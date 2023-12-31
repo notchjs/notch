@@ -34,6 +34,7 @@
     "@armscye/container": "0.2.0",
     "@armscye/core": "0.1.0",
     "@armscye/handler": "0.2.0",
+    "@armscye/hooks": "0.4.0",
     "@armscye/logging": "0.3.0",
     "@armscye/middleware": "0.2.0",
     "@armscye/module": "0.2.0",
