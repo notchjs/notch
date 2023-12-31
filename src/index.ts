@@ -7,5 +7,6 @@ export * from './logger-host';
 export * from './middleware';
 export * from './middleware-container';
 export * from './middleware-factory';
+export * from './middleware-proxy';
 export * from './notch-module';
 export * from './response';
