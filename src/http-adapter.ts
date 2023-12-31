@@ -4,7 +4,7 @@ import * as http from 'http';
 import * as https from 'https';
 import * as stoppable from 'stoppable';
 
-import type { HttpServerOptions } from './interfaces';
+import type { HttpServerOptions, ServeStaticOptions } from './interfaces';
 import type { MiddlewareProxy } from './middleware-proxy';
 import type { HandlerArgument, PathArgument } from './types';
 
@@ -119,5 +119,48 @@ export class HttpAdapter {
     }
 
     return new Promise((resolve) => this.httpServer.close(resolve));
+  }
+
+  public set(setting: string, val: any) {
+    return this.instance.set(setting, val);
+  }
+
+  public enable(setting: string) {
+    return this.instance.enable(setting);
+  }
+
+  public disable(setting: string) {
+    return this.instance.disable(setting);
+  }
+
+  public engine(
+    ext: string,
+    fn: (
+      path: string,
+      options: object,
+      callback: (e: any, rendered?: string) => void,
+    ) => void,
+  ) {
+    return this.instance.engine(ext, fn);
+  }
+
+  public useStaticAssets(path: string, options: ServeStaticOptions) {
+    if (options && options.prefix) {
+      return this.use(options.prefix, express.static(path, options));
+    }
+    return this.use(express.static(path, options));
+  }
+
+  public setBaseViewsDir(path: string | string[]) {
+    return this.set('views', path);
+  }
+
+  public setViewEngine(engine: string) {
+    return this.set('view engine', engine);
+  }
+
+  public setLocal(key: string, value: any) {
+    this.instance.locals[key] = value;
+    return this;
   }
 }
