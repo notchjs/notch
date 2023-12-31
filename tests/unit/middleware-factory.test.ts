@@ -127,6 +127,10 @@ describe('MiddlewareFactory', () => {
     expect(() => factory.prepare(NoopMiddleware)).to.throw();
   });
 
+  it('should reject instance of noop class as middleware', () => {
+    expect(() => factory.prepare(new NoopMiddleware())).to.throw();
+  });
+
   it('should reject number as middleware', () => {
     expect(() => factory.prepare(42)).to.throw();
   });

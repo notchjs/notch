@@ -1,7 +1,13 @@
 import type { Type } from '@armscye/core';
 import type { NotchHandler } from '@armscye/handler';
 import type { NotchMiddleware } from '@armscye/middleware';
-import { isFunction, isString, isSymbol, isUndefined } from '@hemjs/notions';
+import {
+  isFunction,
+  isObject,
+  isString,
+  isSymbol,
+  isUndefined,
+} from '@hemjs/notions';
 
 import {
   ErrorMiddlewareDecorator,
@@ -19,33 +25,37 @@ export class MiddlewareFactory {
       return this.pipeline(middleware);
     }
 
-    if (middleware?.process) {
-      return middleware;
-    }
-
-    if (middleware?.handle) {
-      return this.handler(middleware);
-    }
-
-    if (this.isMiddlewareClass(middleware)) {
-      const instance = new middleware();
-
-      if (isFunction(instance.handle)) {
-        return this.handler(instance);
+    if (isObject(middleware)) {
+      if ((middleware as NotchHandler)?.handle) {
+        return this.handler(middleware as NotchHandler);
       }
 
-      if (isUndefined(instance.process)) {
+      if (isUndefined((middleware as NotchMiddleware)?.process)) {
         throw new Error(
-          `Invalid middleware (${stringify(
-            middleware,
-          )}); does not provide 'process' or 'handle' method. `,
+          `Invalid middleware (${middleware.constructor?.name}); does not provide 'process' or 'handle' method. `,
         );
       }
 
-      return instance;
+      return middleware as NotchMiddleware;
     }
 
     if (isFunction(middleware)) {
+      if (this.isMiddlewareClass(middleware)) {
+        const instance = new middleware();
+
+        if (isFunction(instance.handle)) {
+          return this.handler(instance);
+        }
+
+        if (isUndefined(instance.process)) {
+          throw new Error(
+            `Invalid middleware (${middleware.name}); does not provide 'process' or 'handle' method. `,
+          );
+        }
+
+        return instance;
+      }
+
       return this.callable(middleware);
     }
 
@@ -53,7 +63,7 @@ export class MiddlewareFactory {
       throw new Error(
         `Middleware (${stringify(
           middleware,
-        )}) is expected to be of type string, symbol, class/object defining 'process' or 'handle' method, function, or array; received ${typeof middleware}.`,
+        )}) is neither a provider token, a class, a function, or an array of such arguments.`,
       );
     }
 
