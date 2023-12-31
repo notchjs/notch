@@ -10,6 +10,9 @@ import { ERROR_HANDLER, ERROR_RESPONSE_GENERATOR, LOGGER } from './constants';
 import { ErrorHandlerHost } from './error-handler-host';
 import { ErrorResponseGeneratorHost } from './error-response-generator-host';
 import { NotFoundHandler } from './handler';
+import { HookCollector } from './hook-collector';
+import { HookContainer } from './hook-container';
+import { HookFactory } from './hook-factory';
 import { HttpAdapter } from './http-adapter';
 import { NoopLogger } from './logger';
 import { LoggerHost } from './logger-host';
@@ -101,6 +104,31 @@ export class NotchModule implements Module {
           },
         },
         {
+          provide: HookContainer.name,
+          useFactory: (container: Container) => {
+            return new HookContainer(container);
+          },
+        },
+        {
+          provide: HookFactory.name,
+          useFactory: (container: Container) => {
+            return new HookFactory(container.get(HookContainer.name));
+          },
+        },
+        {
+          provide: HookCollector.name,
+          useFactory: (container: Container) => {
+            const config = container.has('config')
+              ? container.get<any>('config')
+              : {};
+
+            return new HookCollector(
+              container.get(HookFactory.name),
+              config.hooks,
+            );
+          },
+        },
+        {
           provide: HttpAdapter.name,
           useFactory: (container: Container) => {
             return new HttpAdapter(
@@ -116,9 +144,10 @@ export class NotchModule implements Module {
               ? container.get<any>('config')
               : {};
             const loggerHost = container.get<LoggerHost>(LoggerHost.name);
-            const httpAdapter = container.get<HttpAdapter>(HttpAdapter.name);
+            const hooks = container.get<HookCollector>(HookCollector.name);
+            const adapter = container.get<HttpAdapter>(HttpAdapter.name);
 
-            return new Application(httpAdapter, {
+            return new Application(adapter, hooks, {
               log: loggerHost.getLogger(Application.name),
               config: config.notch,
             });

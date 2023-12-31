@@ -32,4 +32,12 @@ export interface ShutdownOptions {
    * See {@link https://www.npmjs.com/package/stoppable | stoppable}
    */
   grace?: number;
+
+  /**
+   * The mercy period: number of milliseconds to continue to try to finish
+   * each registered shutdown hook before forcibly terminating it.
+   *
+   * Default: not set (don't force-terminate).
+   */
+  mercy?: number;
 }

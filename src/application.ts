@@ -2,15 +2,17 @@ import { isFunction } from '@hemjs/notions';
 import * as http from 'http';
 import * as https from 'https';
 
+import type { HookCollector } from './hook-collector';
 import type { HttpAdapter } from './http-adapter';
-import { ApplicationEnvironment } from './interfaces';
+import type { ApplicationEnvironment } from './interfaces';
 
 export class Application {
   protected httpServer: http.Server | https.Server;
   private isInitialized = false;
 
   constructor(
-    private readonly httpAdapter: HttpAdapter,
+    private readonly adapter: HttpAdapter,
+    private readonly hooks: HookCollector,
     private readonly environment: ApplicationEnvironment,
   ) {
     this.registerHttpServer();
@@ -21,12 +23,13 @@ export class Application {
       return this;
     }
 
+    await this.hooks.onStartup();
     this.isInitialized = true;
     return this;
   }
 
   public getHttpAdapter() {
-    return this.httpAdapter;
+    return this.adapter;
   }
 
   public getHttpServer() {
@@ -38,11 +41,11 @@ export class Application {
   }
 
   public createServer() {
-    this.httpAdapter.initHttpServer({
+    this.adapter.initHttpServer({
       tls: this.environment.config?.tls,
       shutdown: this.environment.config?.shutdown,
     });
-    return this.httpAdapter.getHttpServer();
+    return this.adapter.getHttpServer();
   }
 
   public async listen(
@@ -88,10 +91,13 @@ export class Application {
   }
 
   public async close(signal?: string) {
+    const mercy = this.environment.config?.shutdown?.mercy;
+    await this.hooks.beforeShutdown({ signal, mercy });
     await this.dispose();
+    await this.hooks.onShutdown({ signal, mercy });
   }
 
   private async dispose() {
-    await this.httpAdapter.close();
+    await this.adapter.close();
   }
 }
