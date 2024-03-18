@@ -1,0 +1,31 @@
+{
+  "name": "@notchjs/types",
+  "version": "0.2.0",
+  "description": "A collection of shared TypeScript definitions for @notchjs",
+  "license": "MIT",
+  "author": "Augustus Kamau",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "notchjs",
+    "typescript",
+    "types"
+  ],
+  "homepage": "https://github.com/notchjs/notch",
+  "bugs": {
+    "url": "https://github.com/notchjs/notch/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notchjs/notch.git"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

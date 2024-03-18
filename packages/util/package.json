@@ -1,0 +1,37 @@
+{
+  "name": "@notchjs/util",
+  "version": "0.2.0",
+  "description": "A collection of utilities and helper functions for @notchjs",
+  "license": "MIT",
+  "author": "Augustus Kamau",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "notchjs",
+    "utils",
+    "utilities"
+  ],
+  "scripts": {
+    "test": "jest --detectOpenHandles"
+  },
+  "dependencies": {
+    "tslib": "2.6.2"
+  },
+  "homepage": "https://github.com/notchjs/notch",
+  "bugs": {
+    "url": "https://github.com/notchjs/notch/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notchjs/notch.git"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

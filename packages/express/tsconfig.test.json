@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist/tests",
+    "types": ["jest", "node"],
+    "rootDir": ".",
+    "resolveJsonModule": true,
+    "paths": {
+      "@notchjs/types": ["../types/src"],
+      "@notchjs/util": ["../util/src"]
+    }
+  },
+  "references": [
+    { "path": "../types/tsconfig.build.json" },
+    { "path": "../util/tsconfig.build.json" }
+  ]
+}

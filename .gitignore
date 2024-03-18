@@ -1,0 +1,28 @@
+# dependencies
+node_modules
+packages/**/node_modules
+
+# IDE
+/.idea
+/.awcache
+/.vscode
+
+# misc
+.DS_Store
+lerna-debug.log
+npm-debug.log
+yarn-error.log
+/**/npm-debug.log
+package-lock.json
+
+# tests
+coverage
+packages/**/coverage
+/.nyc_output
+
+# dist
+packages/**/dist
+**/*.tsbuildinfo
+
+**/.yarn/*
+.nx/cache

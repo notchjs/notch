@@ -1,0 +1,69 @@
+{
+  "name": "@notchjs/workspace",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A dependency injection based web framework (Node.js)",
+  "author": "Augustus Kamau",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "tsc -b -v packages",
+    "clean": "tsc -b --clean packages",
+    "format": "prettier packages/**/*.ts --ignore-path ./.prettierignore --write",
+    "lint": "eslint 'packages/**/*.ts' --fix",
+    "publish:npm": "lerna publish --no-private",
+    "publish:next": "lerna publish --no-private --dist-tag next",
+    "test": "lerna run test --parallel",
+    "test:core": "lerna run test --scope @notchjs/core --stream",
+    "test:express": "lerna run test --scope @notchjs/express --stream",
+    "test:util": "lerna run test --scope @notchjs/util --stream",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@armscye/container": "0.5.0",
+    "@armscye/core": "0.4.0",
+    "@armscye/hooks": "0.7.0",
+    "@armscye/logging": "0.10.0",
+    "@armscye/module": "0.4.0",
+    "@commitlint/cli": "19.2.0",
+    "@commitlint/config-conventional": "19.1.0",
+    "@hemjs/needle": "1.0.3",
+    "@types/express": "4.17.21",
+    "@types/jest": "29.5.12",
+    "@types/node": "20.11.28",
+    "@types/stoppable": "1.1.3",
+    "@types/supertest": "6.0.2",
+    "@typescript-eslint/eslint-plugin": "7.2.0",
+    "@typescript-eslint/parser": "7.2.0",
+    "eslint": "8.57.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-prettier": "5.1.3",
+    "eslint-plugin-simple-import-sort": "12.0.0",
+    "husky": "9.0.11",
+    "jest": "29.7.0",
+    "lerna": "8.1.2",
+    "lint-staged": "15.2.2",
+    "prettier": "3.2.5",
+    "supertest": "6.3.4",
+    "ts-jest": "29.1.2",
+    "ts-node": "10.9.2",
+    "typescript": "5.4.2"
+  },
+  "homepage": "https://github.com/notchjs/notch",
+  "bugs": {
+    "url": "https://github.com/notchjs/notch/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notchjs/notch.git"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "extends": "../tsconfig.build.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "paths": {
+      "@notchjs/express": ["../express/src"],
+      "@notchjs/types": ["../types/src"],
+      "@notchjs/util": ["../util/src"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**.test.*",
+    "**/__tests__/**",
+    "jest.config.ts"
+  ],
+  "references": [
+    { "path": "../express/tsconfig.build.json" },
+    { "path": "../types/tsconfig.build.json" },
+    { "path": "../util/tsconfig.build.json" }
+  ]
+}

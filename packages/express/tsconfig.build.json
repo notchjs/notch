@@ -1,0 +1,22 @@
+{
+  "extends": "../tsconfig.build.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "paths": {
+      "@notchjs/types": ["../types/src"],
+      "@notchjs/util": ["../util/src"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**.test.*",
+    "**/__tests__/**",
+    "jest.config.ts"
+  ],
+  "references": [
+    { "path": "../types/tsconfig.build.json" },
+    { "path": "../util/tsconfig.build.json" }
+  ]
+}
