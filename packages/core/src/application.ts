@@ -37,8 +37,13 @@ export class Application {
       return this;
     }
 
+    const startAt = process.hrtime.bigint();
     await this.hooks.addStartupHook();
+
     this.isInitialized = true;
+    const finishedAt = process.hrtime.bigint();
+    const elapsed = (Number(finishedAt - startAt) / 1e9).toFixed(3);
+    this.environment.log?.info(`Application started in ${elapsed} seconds.`);
     return this;
   }
 
