@@ -116,6 +116,9 @@ export class Application {
   public async getUrl(): Promise<string> {
     return new Promise((resolve, reject) => {
       if (!this.isListening) {
+        this.environment.log?.error(
+          'Ensure app.listen() is called before attempting to get the URL with app.getUrl().',
+        );
         reject('Server not listening!');
         return;
       }

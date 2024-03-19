@@ -1,4 +1,5 @@
 import type { Container } from '@armscye/container';
+import type { Logger } from '@armscye/logging';
 import { Needle } from '@hemjs/needle';
 import { ExpressAdapter, ExpressModule } from '@notchjs/express';
 import { readFileSync } from 'fs';
@@ -54,9 +55,11 @@ describe('.getUrl() (Express)', () => {
     });
 
     it('should throw an error when server not listening', async () => {
+      const spy = jest.spyOn(app.environment.log as Logger, 'error');
       try {
         await app.getUrl();
       } catch (error) {
+        expect(spy).toHaveBeenCalled();
         expect(error).toEqual('Server not listening!');
       }
     });
