@@ -1,4 +1,5 @@
 import type { Container } from '@armscye/container';
+import type { Logger } from '@armscye/logging';
 import { Needle } from '@hemjs/needle';
 import { ExpressAdapter, ExpressModule } from '@notchjs/express';
 
@@ -52,17 +53,21 @@ describe('.listen() (Express)', () => {
       },
     ]);
     const secondApp = seocndContainer.get<Application>(Application.name);
+    const spy = jest.spyOn(secondApp.environment.log as Logger, 'error');
     try {
       await secondApp.listen(port);
     } catch (error: any) {
+      expect(spy).toHaveBeenCalled();
       expect(error.code).toEqual('EADDRINUSE');
     }
   });
 
   it('should reject if there is an invalid host', async () => {
+    const spy = jest.spyOn(app.environment.log as Logger, 'error');
     try {
       await app.listen(port, '1');
     } catch (error: any) {
+      expect(spy).toHaveBeenCalled();
       expect(error.code).toEqual('EADDRNOTAVAIL');
     }
   });
