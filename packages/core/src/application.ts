@@ -43,7 +43,7 @@ export class Application {
     this.isInitialized = true;
     const finishedAt = process.hrtime.bigint();
     const elapsed = (Number(finishedAt - startAt) / 1e9).toFixed(3);
-    this.environment.log?.info(`Application started in ${elapsed} seconds.`);
+    this.environment.log?.info(`Application started in ${elapsed} seconds`);
     return this;
   }
 
@@ -117,7 +117,7 @@ export class Application {
     return new Promise((resolve, reject) => {
       if (!this.isListening) {
         this.environment.log?.error(
-          'Ensure app.listen() is called before attempting to get the URL with app.getUrl().',
+          'app.listen() must be called before attempting to get the URL with app.getUrl()',
         );
         reject('Server not listening!');
         return;
