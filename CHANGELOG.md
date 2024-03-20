@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3](https://github.com/notchjs/notch/compare/v0.2.2...v0.2.3) (2024-03-20)
+
+### Bug Fixes
+
+- **core:** refine log messages ([a8d89b9](https://github.com/notchjs/notch/commit/a8d89b9d74f7c5e0fd934bb79cc3db530ef6e928))
+
 ## [0.2.2](https://github.com/notchjs/notch/compare/v0.2.1...v0.2.2) (2024-03-20)
 
 ### Bug Fixes
