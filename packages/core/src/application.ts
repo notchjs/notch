@@ -5,6 +5,7 @@ import { platform } from 'node:os';
 
 import { isFunction, isString } from '@hemjs/notions';
 import type { HttpAdapter } from '@notchjs/types';
+import { iterate } from 'iterare';
 
 import type { HookCollector } from './hook-collector';
 import type { ApplicationEnvironment } from './interfaces';
@@ -14,6 +15,8 @@ export class Application {
   private readonly adapter: HttpAdapter;
   private readonly hooks: HookCollector;
   private readonly _environment: ApplicationEnvironment;
+  private readonly activeSignals = new Array<string>();
+  private cleanupRef?: (...args: unknown[]) => unknown;
   private isInitialized = false;
   private isListening = false;
 
@@ -42,8 +45,8 @@ export class Application {
 
     this.isInitialized = true;
     const finishedAt = process.hrtime.bigint();
-    const elapsed = (Number(finishedAt - startAt) / 1e9).toFixed(3);
-    this.environment.log?.info(`Application started in ${elapsed} seconds`);
+    const elapsedTime = (Number(finishedAt - startAt) / 1e9).toFixed(3);
+    this.environment.log?.info(`Application started in ${elapsedTime} seconds`);
     return this;
   }
 
@@ -75,6 +78,10 @@ export class Application {
   ): Promise<any>;
   public async listen(port: any, ...args: any[]): Promise<any> {
     if (!this.isInitialized) await this.init();
+
+    if (this.environment.config?.shutdown?.enabled === true) {
+      this.shutdownOnSignal(this.environment.config?.shutdown?.signals);
+    }
 
     return new Promise((resolve, reject) => {
       const errorHandler = (e: any) => {
@@ -110,6 +117,7 @@ export class Application {
   public async close(signal?: string): Promise<void> {
     await this.dispose();
     await this.hooks.onShutdown(signal);
+    this.unsubscribeFromSignals();
     this.isListening = false;
   }
 
@@ -117,13 +125,55 @@ export class Application {
     return new Promise((resolve, reject) => {
       if (!this.isListening) {
         this.environment.log?.error(
-          'app.listen() must be called before attempting to get the URL with app.getUrl()',
+          'app.listen() must be called before app.getUrl()',
         );
         reject('Server not listening!');
         return;
       }
       const address = this.httpServer.address();
       resolve(this.formatAddress(address));
+    });
+  }
+
+  protected shutdownOnSignal(signals: (NodeJS.Signals | string)[] = []): void {
+    signals = iterate(Array.from(new Set(signals)))
+      .map((signal) => signal.toString().toUpperCase().trim())
+      .filter((signal) => !this.activeSignals.includes(signal))
+      .toArray();
+    this.listenToSignals(signals);
+  }
+
+  protected listenToSignals(signals: string[]): void {
+    let receivedSignal = false;
+    const doCleanup = async (signal: string) => {
+      try {
+        if (receivedSignal) {
+          return;
+        }
+        receivedSignal = true;
+        this.environment.log?.info(`Received ${signal}. Shutdown initiated...`);
+        await this.dispose();
+        await this.hooks.onShutdown(signal);
+        signals.forEach((sig) => process.removeListener(sig, doCleanup));
+        process.kill(process.pid, signal);
+      } catch (err: any) {
+        this.environment.log?.error(err.stack!);
+        process.exit(1);
+      }
+    };
+    this.cleanupRef = doCleanup as (...args: unknown[]) => unknown;
+    signals.forEach((signal) => {
+      this.activeSignals.push(signal);
+      process.on(signal as any, doCleanup);
+    });
+  }
+
+  protected unsubscribeFromSignals(): void {
+    if (!this.cleanupRef) {
+      return;
+    }
+    this.activeSignals.forEach((signal) => {
+      process.removeListener(signal, this.cleanupRef!);
     });
   }
 
