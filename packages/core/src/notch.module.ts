@@ -69,7 +69,9 @@ export class NotchModule implements Module {
             );
 
             if (!httpAdapterHost.httpAdapter) {
-              throw new Error('HTTP adapter missing');
+              throw new Error(
+                'HTTP adapter not found. Please register a compatible HTTP adapter with the "HTTP_ADAPTER" token.',
+              );
             }
 
             const config = container.has('config')
