@@ -12,7 +12,7 @@ class OnShutdown implements ShutdownHook {
   onShutdown(signal?: string) {}
 }
 
-describe('hooks', () => {
+describe('hooks (Express)', () => {
   let container: Needle;
   let app: Application;
 
