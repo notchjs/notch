@@ -38,7 +38,7 @@ export class Application {
     }
 
     const startAt = process.hrtime.bigint();
-    await this.hooks.addStartupHook();
+    await this.hooks.onStartup();
 
     this.isInitialized = true;
     const finishedAt = process.hrtime.bigint();
@@ -109,7 +109,7 @@ export class Application {
 
   public async close(signal?: string): Promise<void> {
     await this.dispose();
-    await this.hooks.addShutdownHook(signal);
+    await this.hooks.onShutdown(signal);
     this.isListening = false;
   }
 

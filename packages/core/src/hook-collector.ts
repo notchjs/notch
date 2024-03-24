@@ -12,11 +12,11 @@ export class HookCollector {
     this.records = factory.prepare(hooks) as HookRecord[];
   }
 
-  public async addStartupHook(): Promise<void> {
+  public async onStartup(): Promise<void> {
     await Promise.all(this.runStartupHook(this.records));
   }
 
-  public async addShutdownHook(signal?: string): Promise<void> {
+  public async onShutdown(signal?: string): Promise<void> {
     await Promise.all(this.runShutdownHook(this.records, signal));
   }
 

@@ -31,7 +31,7 @@ describe('HookCollector', () => {
     const hook = new OnStartupHook();
     const hookSpy = jest.spyOn(hook, 'onStartup');
     const hookCollector = new HookCollector(factory, [hook, noopHook]);
-    await hookCollector.addStartupHook();
+    await hookCollector.onStartup();
     expect(hookSpy).toHaveBeenCalled();
     expect(hookSpy).toHaveBeenCalledWith();
   });
@@ -40,7 +40,7 @@ describe('HookCollector', () => {
     const hook = new OnShutdownHook();
     const hookSpy = jest.spyOn(hook, 'onShutdown');
     const hookCollector = new HookCollector(factory, [hook, noopHook]);
-    await hookCollector.addShutdownHook();
+    await hookCollector.onShutdown();
     expect(hookSpy).toHaveBeenCalled();
   });
 
@@ -48,7 +48,7 @@ describe('HookCollector', () => {
     const hook = new OnShutdownHook();
     const hookSpy = jest.spyOn(hook, 'onShutdown');
     const hookCollector = new HookCollector(factory, [hook, noopHook]);
-    await hookCollector.addShutdownHook('SIGTERM');
+    await hookCollector.onShutdown('SIGTERM');
     expect(hookSpy).toHaveBeenCalled();
     expect(hookSpy).toHaveBeenCalledWith('SIGTERM');
   });
