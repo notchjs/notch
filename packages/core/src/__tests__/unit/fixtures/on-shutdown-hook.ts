@@ -1,5 +1,5 @@
 import type { ShutdownHook } from '@armscye/hooks';
 
-export class OnShutdownHook implements Omit<ShutdownHook, 'beforeShutdown'> {
+export class OnShutdownHook implements ShutdownHook {
   onShutdown(signal?: string) {}
 }
