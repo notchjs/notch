@@ -157,7 +157,7 @@ export class Application {
         signals.forEach((sig) => process.removeListener(sig, doCleanup));
         process.kill(process.pid, signal);
       } catch (err: any) {
-        this.environment.log?.error(err.stack!);
+        this.environment.log?.error(`Error during shutdown: ${err.stack!}`);
         process.exit(1);
       }
     };
