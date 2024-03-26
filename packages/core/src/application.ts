@@ -136,7 +136,7 @@ export class Application {
   }
 
   protected shutdownOnSignal(signals: (NodeJS.Signals | string)[] = []): void {
-    signals = iterate(Array.from(new Set(signals)))
+    signals = iterate(Array.from(new Set(['SIGTERM', ...signals])))
       .map((signal) => signal.toString().toUpperCase().trim())
       .filter((signal) => !this.activeSignals.includes(signal))
       .toArray();
