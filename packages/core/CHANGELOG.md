@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/notchjs/notch/compare/v0.3.0...v0.4.0) (2024-03-26)
+
+### Features
+
+- **core:** set SIGTERM as default signal ([a6a5646](https://github.com/notchjs/notch/commit/a6a56460f323a5885693051f2810115147d022fc))
+
 # [0.3.0](https://github.com/notchjs/notch/compare/v0.2.3...v0.3.0) (2024-03-24)
 
 ### Bug Fixes

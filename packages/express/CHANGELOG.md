@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/notchjs/notch/compare/v0.3.0...v0.4.0) (2024-03-26)
+
+### Bug Fixes
+
+- **deps:** update dependency express to v4.19.2 ([449c1e9](https://github.com/notchjs/notch/commit/449c1e9849b413882253919f60049fe7388cc596))
+
 # [0.3.0](https://github.com/notchjs/notch/compare/v0.2.3...v0.3.0) (2024-03-24)
 
 ### Bug Fixes
