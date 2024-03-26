@@ -15,7 +15,7 @@ export class Application {
   private readonly adapter: HttpAdapter;
   private readonly hooks: HookCollector;
   private readonly _environment: ApplicationEnvironment;
-  private readonly activeSignals = new Array<string>();
+  private readonly activeSignals = new Array<NodeJS.Signals | string>();
   private cleanupRef?: (...args: unknown[]) => unknown;
   private isInitialized = false;
   private isListening = false;
@@ -31,11 +31,11 @@ export class Application {
     this.registerHttpServer();
   }
 
-  get environment() {
+  get environment(): ApplicationEnvironment {
     return this._environment;
   }
 
-  public async init() {
+  public async init(): Promise<this> {
     if (this.isInitialized) {
       return this;
     }
@@ -140,12 +140,12 @@ export class Application {
       .map((signal) => signal.toString().toUpperCase().trim())
       .filter((signal) => !this.activeSignals.includes(signal))
       .toArray();
-    this.listenToSignals(signals);
+    this.listenToSignals(signals as NodeJS.Signals[]);
   }
 
-  protected listenToSignals(signals: string[]): void {
+  protected listenToSignals(signals: NodeJS.Signals[]): void {
     let receivedSignal = false;
-    const doCleanup = async (signal: string) => {
+    const doCleanup = async (signal: NodeJS.Signals) => {
       try {
         if (receivedSignal) {
           return;
