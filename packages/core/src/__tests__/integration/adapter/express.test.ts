@@ -24,6 +24,8 @@ describe('Adapter (Express)', () => {
   });
 
   test('should reject if missing http adapter', async () => {
-    expect(() => container.get<Application>(Application.name)).toThrow();
+    expect(() => container.get<Application>(Application.name)).toThrow(
+      'HTTP adapter not found.',
+    );
   });
 });

@@ -1,13 +1,13 @@
 import type { HttpAdapter } from '@notchjs/types';
 
 export class HttpAdapterHost {
-  private _httpAdapter: HttpAdapter | undefined;
+  private _httpAdapter: HttpAdapter;
 
-  constructor(httpAdapter?: HttpAdapter) {
+  constructor(httpAdapter: HttpAdapter) {
     this._httpAdapter = httpAdapter;
   }
 
-  get httpAdapter(): HttpAdapter | undefined {
+  get httpAdapter(): HttpAdapter {
     return this._httpAdapter;
   }
 }

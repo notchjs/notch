@@ -19,11 +19,17 @@ export class NotchModule implements Module {
         {
           provide: HttpAdapterHost.name,
           useFactory: (container: Container) => {
-            const adapter = container.has(HTTP_ADAPTER)
+            const httpAdapter = container.has(HTTP_ADAPTER)
               ? container.get<HttpAdapter>(HTTP_ADAPTER)
               : undefined;
 
-            return new HttpAdapterHost(adapter);
+            if (!httpAdapter) {
+              throw new Error(
+                'HTTP adapter not found. Please register a compatible HTTP adapter with the "HTTP_ADAPTER" token.',
+              );
+            }
+
+            return new HttpAdapterHost(httpAdapter);
           },
         },
         {
@@ -64,19 +70,12 @@ export class NotchModule implements Module {
         {
           provide: Application.name,
           useFactory: (container: Container) => {
-            const httpAdapterHost = container.get<HttpAdapterHost>(
-              HttpAdapterHost.name,
-            );
-
-            if (!httpAdapterHost.httpAdapter) {
-              throw new Error(
-                'HTTP adapter not found. Please register a compatible HTTP adapter with the "HTTP_ADAPTER" token.',
-              );
-            }
-
             const config = container.has('config')
               ? container.get<any>('config')
               : {};
+            const httpAdapterHost = container.get<HttpAdapterHost>(
+              HttpAdapterHost.name,
+            );
             const loggerHost = container.get<LoggerHost>(LoggerHost.name);
             const hooks = container.get<HookCollector>(HookCollector.name);
 
