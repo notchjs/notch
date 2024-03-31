@@ -8,6 +8,9 @@
       "path": "./express/tsconfig.build.json"
     },
     {
+      "path": "./http/tsconfig.build.json"
+    },
+    {
       "path": "./types/tsconfig.build.json"
     },
     {

@@ -1,0 +1,37 @@
+{
+  "name": "@notchjs/http",
+  "version": "0.4.0",
+  "description": "Utility enums and constants for use with HTTP messages (Node.js)",
+  "license": "MIT",
+  "author": "Augustus Kamau",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "notchjs",
+    "http",
+    "http-message"
+  ],
+  "scripts": {
+    "test": "jest --detectOpenHandles"
+  },
+  "dependencies": {
+    "tslib": "2.6.2"
+  },
+  "homepage": "https://github.com/notchjs/notch",
+  "bugs": {
+    "url": "https://github.com/notchjs/notch/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notchjs/notch.git"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

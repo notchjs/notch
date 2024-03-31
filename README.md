@@ -6,6 +6,7 @@
 
 - [core](./packages/core)
 - [express](./packages/express)
+- [http](./packages/http)
 - [types](./packages/types)
 - [util](./packages/util)
 

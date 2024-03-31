@@ -18,6 +18,7 @@
     "test": "lerna run test --parallel",
     "test:core": "lerna run test --scope @notchjs/core --stream",
     "test:express": "lerna run test --scope @notchjs/express --stream",
+    "test:http": "lerna run test --scope @notchjs/http --stream",
     "test:util": "lerna run test --scope @notchjs/util --stream",
     "prepare": "husky"
   },
