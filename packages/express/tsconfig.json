@@ -3,6 +3,7 @@
   "compilerOptions": {
     "types": ["node"],
     "paths": {
+      "@notchjs/http": ["../http/src"],
       "@notchjs/types": ["../types/src"],
       "@notchjs/util": ["../util/src"]
     }

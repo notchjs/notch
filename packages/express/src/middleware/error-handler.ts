@@ -1,4 +1,5 @@
 import { isNil } from '@hemjs/notions';
+import { ErrorStatus, Status } from '@notchjs/http';
 import type { NotchMiddleware, ResponseGenerator } from '@notchjs/types';
 
 export class ErrorHandler implements NotchMiddleware {
@@ -25,7 +26,7 @@ export class ErrorHandler implements NotchMiddleware {
     return status;
   }
 
-  private isErrorStatus(status: number): boolean {
+  private isErrorStatus(status: Status): status is ErrorStatus {
     return status >= 400 && status < 600;
   }
 }

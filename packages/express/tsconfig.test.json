@@ -6,11 +6,13 @@
     "rootDir": ".",
     "resolveJsonModule": true,
     "paths": {
+      "@notchjs/http": ["../http/src"],
       "@notchjs/types": ["../types/src"],
       "@notchjs/util": ["../util/src"]
     }
   },
   "references": [
+    { "path": "../types/tsconfig.build.json" },
     { "path": "../types/tsconfig.build.json" },
     { "path": "../util/tsconfig.build.json" }
   ]
