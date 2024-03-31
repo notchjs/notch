@@ -7,12 +7,14 @@
     "resolveJsonModule": true,
     "paths": {
       "@notchjs/express": ["../express/src"],
+      "@notchjs/http": ["../http/src"],
       "@notchjs/types": ["../types/src"],
       "@notchjs/util": ["../util/src"]
     }
   },
   "references": [
     { "path": "../express/tsconfig.build.json" },
+    { "path": "../http/tsconfig.build.json" },
     { "path": "../types/tsconfig.build.json" },
     { "path": "../util/tsconfig.build.json" }
   ]

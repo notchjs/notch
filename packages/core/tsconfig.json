@@ -4,6 +4,7 @@
     "types": ["node"],
     "paths": {
       "@notchjs/express": ["../express/src"],
+      "@notchjs/http": ["../http/src"],
       "@notchjs/types": ["../types/src"],
       "@notchjs/util": ["../util/src"]
     }
