@@ -5,7 +5,7 @@ import type { HttpAdapter } from '@notchjs/types';
 import { NoopLogger } from '@notchjs/util';
 
 import { Application } from './application';
-import { HTTP_ADAPTER, LOGGER } from './constants';
+import { APP_LOGGER, HTTP_ADAPTER } from './constants';
 import { HookCollector } from './hook-collector';
 import { HookContainer } from './hook-container';
 import { HookFactory } from './hook-factory';
@@ -35,8 +35,8 @@ export class NotchModule implements Module {
         {
           provide: LoggerHost.name,
           useFactory: (container: Container) => {
-            const logger = container.has(LOGGER)
-              ? container.get<Logger>(LOGGER)
+            const logger = container.has(APP_LOGGER)
+              ? container.get<Logger>(APP_LOGGER)
               : new NoopLogger();
 
             return new LoggerHost(logger);
