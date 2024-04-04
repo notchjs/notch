@@ -34,10 +34,10 @@
   dependencies:
     "@armscye/core" "^0.4.0"
 
-"@armscye/logging@0.10.0":
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/@armscye/logging/-/logging-0.10.0.tgz#c6a1557f3c2040572cd3e239f6828b8d37a52b6a"
-  integrity sha512-kyxhbopn3yYc05yEFJCFVlDo9/JzGxuueH/yBnsxaFnocTBHV63s1k4vy1YtHatTLrsAYADPUNiSIyDWT4ujUw==
+"@armscye/logging@0.11.0":
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/@armscye/logging/-/logging-0.11.0.tgz#3cb433559464f15f714e42a9d0888ca3f815f468"
+  integrity sha512-J9OMCnSUNP25TAkTrQv5/Kfoyrjd2QXOdJt/fOcrFqpwVxBc1AzNroPWe6ifs3/AxqOeQTOVtfP5oPwC8TEZjA==
 
 "@armscye/module@0.4.0":
   version "0.4.0"
