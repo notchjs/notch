@@ -16,8 +16,4 @@ describe('NoopLogger', () => {
     expect(logger.warn('warn')).toBeUndefined();
     expect(logger.error('error')).toBeUndefined();
   });
-
-  it('should return an instance of NoopLogger', () => {
-    expect(logger.getLogger('NoopLogger')).toEqual(logger);
-  });
 });

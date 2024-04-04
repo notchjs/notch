@@ -80,7 +80,7 @@ export class NotchModule implements Module {
             const hooks = container.get<HookCollector>(HookCollector.name);
 
             return new Application(httpAdapterHost.httpAdapter, hooks, {
-              log: loggerHost.logger?.getLogger(Application.name),
+              log: loggerHost.logger,
               config: config.notch,
             });
           },

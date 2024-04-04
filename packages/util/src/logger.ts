@@ -6,7 +6,4 @@ export class NoopLogger implements Logger {
   info(msg: any, ...args: unknown[]) {}
   warn(msg: any, ...args: unknown[]) {}
   error(msg: any, ...args: unknown[]) {}
-  getLogger(name: string): this {
-    return this;
-  }
 }
