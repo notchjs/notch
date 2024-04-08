@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.1](https://github.com/notchjs/notch/compare/v0.6.0...v0.6.1) (2024-04-08)
+
+### Bug Fixes
+
+- **core:** started -> initialized ([25b08dd](https://github.com/notchjs/notch/commit/25b08dd30540faeef51a38b10958295e496e043b))
+- **deps:** update dependency eslint to v8.57.0 ([2e06501](https://github.com/notchjs/notch/commit/2e06501084cf6bec63ba47cdf929b7e012d8642b))
+
 # [0.6.0](https://github.com/notchjs/notch/compare/v0.5.0...v0.6.0) (2024-04-04)
 
 ### Features
