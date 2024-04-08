@@ -46,7 +46,9 @@ export class Application {
     this.isInitialized = true;
     const finishedAt = process.hrtime.bigint();
     const elapsedTime = (Number(finishedAt - startAt) / 1e9).toFixed(3);
-    this.environment.log?.info(`Application started in ${elapsedTime} seconds`);
+    this.environment.log?.info(
+      `Application initialized in ${elapsedTime} seconds.`,
+    );
     return this;
   }
 
