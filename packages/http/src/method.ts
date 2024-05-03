@@ -31,4 +31,4 @@ export const METHOD_TEXT: Readonly<Record<Method, string>> = {
   [Method.Trace]: 'TRACE',
   [Method.Connect]: 'CONNECT',
   [Method.Options]: 'OPTIONS',
-};
+} as const;
