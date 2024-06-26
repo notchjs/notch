@@ -1,17 +1,17 @@
-import { Status, STATUS_TEXT } from '..';
+import { STATUS_CODE, STATUS_TEXT } from '..';
 
-test('Status', () => {
-  expect(Status.OK).toEqual(200);
-  expect(Status.NoContent).toEqual(204);
-  expect(Status.NotFound).toEqual(404);
-  expect(Status.InternalServerError).toEqual(500);
+test('STATUS_CODE', () => {
+  expect(STATUS_CODE.OK).toEqual(200);
+  expect(STATUS_CODE.NoContent).toEqual(204);
+  expect(STATUS_CODE.NotFound).toEqual(404);
+  expect(STATUS_CODE.InternalServerError).toEqual(500);
 });
 
 test('STATUS_TEXT', () => {
-  expect(STATUS_TEXT[Status.OK]).toEqual('OK');
-  expect(STATUS_TEXT[Status.NoContent]).toEqual('No Content');
-  expect(STATUS_TEXT[Status.NotFound]).toEqual('Not Found');
-  expect(STATUS_TEXT[Status.InternalServerError]).toEqual(
+  expect(STATUS_TEXT[STATUS_CODE.OK]).toEqual('OK');
+  expect(STATUS_TEXT[STATUS_CODE.NoContent]).toEqual('No Content');
+  expect(STATUS_TEXT[STATUS_CODE.NotFound]).toEqual('Not Found');
+  expect(STATUS_TEXT[STATUS_CODE.InternalServerError]).toEqual(
     'Internal Server Error',
   );
 });
