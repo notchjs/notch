@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/notchjs/notch/compare/v0.6.2...v0.7.0) (2024-06-26)
+
+### Bug Fixes
+
+- **deps:** update dependency tslib to v2.6.3 ([23286ab](https://github.com/notchjs/notch/commit/23286ab1588b3878a570af1b079fd67ce6babf44))
+
 ## [0.6.2](https://github.com/notchjs/notch/compare/v0.6.1...v0.6.2) (2024-05-03)
 
 **Note:** Version bump only for package @notchjs/core

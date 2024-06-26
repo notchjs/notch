@@ -1,6 +1,6 @@
 {
   "name": "@notchjs/util",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "A collection of utilities and helper functions for @notchjs",
   "license": "MIT",
   "author": "Augustus Kamau",
