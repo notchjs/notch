@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/notchjs/notch/compare/v0.7.0...v0.8.0) (2024-08-05)
+
+### Bug Fixes
+
+- **deps:** update dependency @hemjs/notions to v1.0.7 ([f56648a](https://github.com/notchjs/notch/commit/f56648a125c37d7002d8a7b8c74c6aa638154f3c))
+
+### Features
+
+- add status code type guards ([f4de983](https://github.com/notchjs/notch/commit/f4de9838ab5331fd3d433e4c8b5d7cd62f408d85))
+
 # [0.7.0](https://github.com/notchjs/notch/compare/v0.6.2...v0.7.0) (2024-06-26)
 
 ### Bug Fixes

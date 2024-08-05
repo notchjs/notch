@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/notchjs/notch/compare/v0.7.0...v0.8.0) (2024-08-05)
+
+**Note:** Version bump only for package @notchjs/core
+
 # [0.7.0](https://github.com/notchjs/notch/compare/v0.6.2...v0.7.0) (2024-06-26)
 
 ### Bug Fixes
