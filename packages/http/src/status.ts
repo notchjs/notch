@@ -1,3 +1,13 @@
+import type {
+  ClientErrorStatus,
+  ErrorStatus,
+  InformationalStatus,
+  RedirectStatus,
+  ServerErrorStatus,
+  StatusCode,
+  SuccessfulStatus,
+} from './types';
+
 /** Standard HTTP status codes. */
 export const STATUS_CODE = {
   /** RFC 7231, 6.2.1 */
@@ -196,3 +206,43 @@ export const STATUS_TEXT = {
   [STATUS_CODE.UseProxy]: 'Use Proxy',
   [STATUS_CODE.VariantAlsoNegotiates]: 'Variant Also Negotiates',
 } as const;
+
+/** Returns whether the provided number is a valid HTTP status code. */
+export function isStatus(status: number): status is StatusCode {
+  return Object.values(STATUS_CODE).includes(status as StatusCode);
+}
+
+/** A type guard that determines if the status code is informational. */
+export function isInformationalStatus(
+  status: number,
+): status is InformationalStatus {
+  return isStatus(status) && status >= 100 && status < 200;
+}
+
+/** A type guard that determines if the status code is successful. */
+export function isSuccessfulStatus(status: number): status is SuccessfulStatus {
+  return isStatus(status) && status >= 200 && status < 300;
+}
+/** A type guard that determines if the status code is a redirection. */
+export function isRedirectStatus(status: number): status is RedirectStatus {
+  return isStatus(status) && status >= 300 && status < 400;
+}
+
+/** A type guard that determines if the status code is a client error. */
+export function isClientErrorStatus(
+  status: number,
+): status is ClientErrorStatus {
+  return isStatus(status) && status >= 400 && status < 500;
+}
+
+/** A type guard that determines if the status code is a server error. */
+export function isServerErrorStatus(
+  status: number,
+): status is ServerErrorStatus {
+  return isStatus(status) && status >= 500 && status < 600;
+}
+
+/** A type guard that determines if the status code is an error. */
+export function isErrorStatus(status: number): status is ErrorStatus {
+  return isStatus(status) && status >= 400 && status < 600;
+}

@@ -1,5 +1,6 @@
-import { STATUS_CODE, STATUS_TEXT } from './status';
+import type { STATUS_CODE, STATUS_TEXT } from './status';
 
+/** An HTTP status code. */
 export type StatusCode = (typeof STATUS_CODE)[keyof typeof STATUS_CODE];
 
 /** An HTTP status that is a informational (1XX). */
