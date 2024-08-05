@@ -30,7 +30,7 @@
     "@armscye/module": "0.4.0",
     "@commitlint/cli": "19.3.0",
     "@commitlint/config-conventional": "19.2.2",
-    "@hemjs/needle": "1.0.7",
+    "@hemjs/needle": "1.0.8",
     "@types/express": "4.17.21",
     "@types/jest": "29.5.12",
     "@types/node": "20.14.14",
