@@ -18,7 +18,7 @@ describe('stoppable', () => {
 
   it('should return undefined for uninitialized server', () => {
     const adapter = container.get<ExpressAdapter>(ExpressAdapter.name);
-    expect(adapter.close()).toBeUndefined;
+    expect(adapter.close()).toBeUndefined();
   });
 
   it('should stop server when graceful (default grace period)', async () => {

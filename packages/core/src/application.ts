@@ -180,7 +180,7 @@ export class Application {
   }
 
   protected async dispose(): Promise<void> {
-    this.adapter && (await this.adapter.close());
+    await this.adapter?.close();
   }
 
   private formatAddress(address: AddressInfo | string | null): string {

@@ -8,9 +8,9 @@ export type Handler =
   | ErrorRequestHandler
   | RequestHandler
   | Type<any>
-  | Function
+  | ((...args: any[]) => any)
   | object
   | string
-  | Symbol;
+  | symbol;
 
 export type HandlerArgument = Handler | Handler[];

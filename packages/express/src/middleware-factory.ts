@@ -73,7 +73,7 @@ export class MiddlewareFactory {
     return this.lazy(middleware);
   }
 
-  public callable(middleware: Function): NotchMiddleware {
+  public callable(middleware: (...args: any[]) => any): NotchMiddleware {
     if (middleware.length > 3) {
       return new ErrorMiddlewareDecorator(middleware);
     }

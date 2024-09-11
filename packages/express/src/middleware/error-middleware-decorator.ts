@@ -1,9 +1,9 @@
 import type { NotchMiddleware } from '@notchjs/types';
 
 export class ErrorMiddlewareDecorator implements NotchMiddleware {
-  private readonly callable: Function;
+  private readonly callable: (...args: any[]) => any;
 
-  constructor(callable: Function) {
+  constructor(callable: (...args: any[]) => any) {
     this.callable = callable;
   }
 
