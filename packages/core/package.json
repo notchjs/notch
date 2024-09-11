@@ -20,7 +20,7 @@
   "dependencies": {
     "@notchjs/util": "^0.8.0",
     "iterare": "1.2.1",
-    "tslib": "2.6.3"
+    "tslib": "2.7.0"
   },
   "devDependencies": {
     "@notchjs/express": "^0.8.0",
