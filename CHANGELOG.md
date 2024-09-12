@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.1](https://github.com/notchjs/notch/compare/v0.8.0...v0.8.1) (2024-09-12)
+
+### Bug Fixes
+
+- **deps:** update dependency express to v4.20.0 ([f514251](https://github.com/notchjs/notch/commit/f514251d878ab83073155bcad72de9403bc47236))
+- **deps:** update dependency express to v4.21.0 ([ac20e8f](https://github.com/notchjs/notch/commit/ac20e8fb1d808233881500f8aa969ba0f3004fa8))
+- **deps:** update dependency tslib to v2.7.0 ([fb9bdfe](https://github.com/notchjs/notch/commit/fb9bdfe72280c22752cba53b27936c4eac09ad4d))
+- **repo:** typing and linting ([b9a2681](https://github.com/notchjs/notch/commit/b9a26819702252bd0aa92893584d3d62ba522819))
+
 # [0.8.0](https://github.com/notchjs/notch/compare/v0.7.0...v0.8.0) (2024-08-05)
 
 ### Bug Fixes

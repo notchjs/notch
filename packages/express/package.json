@@ -1,6 +1,6 @@
 {
   "name": "@notchjs/express",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "A dependency injection based express adapter (Node.js)",
   "license": "MIT",
   "author": "Augustus Kamau",
@@ -19,8 +19,8 @@
   },
   "dependencies": {
     "@hemjs/notions": "1.0.7",
-    "@notchjs/http": "^0.8.0",
-    "@notchjs/util": "^0.8.0",
+    "@notchjs/http": "^0.8.1",
+    "@notchjs/util": "^0.8.1",
     "express": "4.21.0",
     "stoppable": "1.1.0",
     "tslib": "2.7.0"
