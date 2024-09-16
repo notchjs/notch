@@ -521,10 +521,10 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.57.0.tgz#a5417ae8427873f1dd08b70b3574b453e67b5f7f"
   integrity sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==
 
-"@hemjs/needle@1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@hemjs/needle/-/needle-1.0.8.tgz#42a37f0107d43c3122a16dd615e37b151d5f131d"
-  integrity sha512-km/qahq5gYcvKG0EdIDu5rYNu5s9rhNkpljshEX6BChokhw1ZpoffNmqeKgMXn6/VDmAJlgSXCqfIU8oQwIj0w==
+"@hemjs/needle@1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@hemjs/needle/-/needle-1.0.9.tgz#4f2bc01c49911c970054d770124edb4c05247a09"
+  integrity sha512-IvJB6528sMHkYy5jEBZEmJmMMtAN2w7XKB1f5k9o5dKCmO5dlYH7UZV7c30nJYgVl2GBqDcpTVh6XI/SWJA4Yg==
 
 "@hemjs/notions@1.0.7":
   version "1.0.7"
