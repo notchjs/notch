@@ -557,10 +557,10 @@
   resolved "https://registry.yarnpkg.com/@hemjs/needle/-/needle-1.0.9.tgz#4f2bc01c49911c970054d770124edb4c05247a09"
   integrity sha512-IvJB6528sMHkYy5jEBZEmJmMMtAN2w7XKB1f5k9o5dKCmO5dlYH7UZV7c30nJYgVl2GBqDcpTVh6XI/SWJA4Yg==
 
-"@hemjs/notions@1.0.9":
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/@hemjs/notions/-/notions-1.0.9.tgz#f3fa0b90f113ef6810ca759ad6e4358a3bbab7b1"
-  integrity sha512-IDG4Ij5rwNNxxSDzAyaogRxIG90lsbJdZjqgEGu7ynYRqdipDaIMDPpjRh5E2mDAM3wJt53y/7ENmNaMK0i7Hw==
+"@hemjs/notions@1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@hemjs/notions/-/notions-1.0.10.tgz#8fbf7c771fbd4aa7aa9a7925b00e3f1a290831c7"
+  integrity sha512-THtpmXaQRJ1Sp6X/oFKdwdNV3cunCdmJJQea87oGp9ivprEYPfyUqT1Ok/yLVsWO/m78lRsWd3DE9HEh6AdJ1A==
 
 "@humanwhocodes/module-importer@^1.0.1":
   version "1.0.1"
