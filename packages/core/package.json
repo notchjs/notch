@@ -1,6 +1,6 @@
 {
   "name": "@notchjs/core",
-  "version": "0.8.3",
+  "version": "0.8.4",
   "description": "A dependency injection based web framework (Node.js)",
   "license": "MIT",
   "author": "Augustus Kamau",
@@ -24,7 +24,7 @@
     "tslib": "2.7.0"
   },
   "devDependencies": {
-    "@notchjs/express": "^0.8.3",
+    "@notchjs/express": "^0.8.4",
     "@notchjs/http": "^0.8.1",
     "@notchjs/types": "^0.8.0"
   },
