@@ -21,7 +21,7 @@
     "@hemjs/notions": "1.0.10",
     "@notchjs/http": "^0.8.1",
     "@notchjs/util": "^0.8.1",
-    "express": "4.21.0",
+    "express": "4.21.1",
     "stoppable": "1.1.0",
     "tslib": "2.7.0"
   },
