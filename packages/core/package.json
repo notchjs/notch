@@ -21,7 +21,7 @@
     "@hemjs/notions": "1.0.10",
     "@notchjs/util": "^0.8.1",
     "iterare": "1.2.1",
-    "tslib": "2.7.0"
+    "tslib": "2.8.0"
   },
   "devDependencies": {
     "@notchjs/express": "^0.8.4",
