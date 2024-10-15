@@ -18,7 +18,7 @@
     "test": "jest --detectOpenHandles"
   },
   "dependencies": {
-    "tslib": "2.7.0"
+    "tslib": "2.8.0"
   },
   "homepage": "https://github.com/notchjs/notch",
   "bugs": {
