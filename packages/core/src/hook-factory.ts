@@ -1,3 +1,4 @@
+import type { Type } from '@armscye/core';
 import { isFunction, isObject, isString, isSymbol } from '@hemjs/notions';
 import { stringify } from '@notchjs/util';
 
@@ -23,17 +24,14 @@ export class HookFactory {
       };
     }
 
+    if (this.isClass(hook)) {
+      return {
+        name: hook.name,
+        hook: new hook(),
+      };
+    }
+
     if (isFunction(hook)) {
-      const funcAsString = hook.toString();
-      const isClass = /^class\s/.test(funcAsString);
-
-      if (isClass) {
-        return {
-          name: hook.name,
-          hook: new hook(),
-        };
-      }
-
       return {
         name: hook.name,
         hook: hook(),
@@ -60,5 +58,15 @@ export class HookFactory {
 
   pipeline(hooks: any[]): any[] {
     return hooks.map((hook) => this.prepare(hook));
+  }
+
+  private isClass(hook: any): hook is Type<any> {
+    const hookStr = hook.toString();
+
+    if (hookStr.substring(0, 5) === 'class') {
+      return true;
+    }
+
+    return false;
   }
 }
