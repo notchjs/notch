@@ -1,6 +1,6 @@
 {
   "name": "@notchjs/http",
-  "version": "0.8.1",
+  "version": "0.8.5",
   "description": "Utility enums and constants for use with HTTP messages (Node.js)",
   "license": "MIT",
   "author": "Augustus Kamau",

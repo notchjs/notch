@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.5](https://github.com/notchjs/notch/compare/v0.8.4...v0.8.5) (2024-10-21)
+
+### Bug Fixes
+
+- **deps:** update dependency @hemjs/notions to v1.1.0 ([bd59c8f](https://github.com/notchjs/notch/commit/bd59c8fd74e45446d77ed198c232808a49cec201))
+- **deps:** update dependency tslib to v2.8.0 ([a622054](https://github.com/notchjs/notch/commit/a622054972a8b99ff00b57b21fc6f77221429a9c))
+
 ## [0.8.4](https://github.com/notchjs/notch/compare/v0.8.3...v0.8.4) (2024-10-09)
 
 **Note:** Version bump only for package @notchjs/core
