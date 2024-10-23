@@ -17,11 +17,11 @@ export class HookContainer implements Container {
       );
     }
 
-    return this.container.get(token) as T;
+    return this.container.get(token);
   }
 
   has(token: ProviderToken): boolean {
-    if (this.container.has(token as ProviderToken)) {
+    if (this.container.has(token)) {
       return true;
     }
 
