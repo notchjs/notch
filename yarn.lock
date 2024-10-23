@@ -552,10 +552,10 @@
   dependencies:
     levn "^0.4.1"
 
-"@hemjs/needle@1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@hemjs/needle/-/needle-1.1.0.tgz#07ad9c5e5165c2abcb017e3a1eed09d4ba32a297"
-  integrity sha512-5snu2X6Ly0/s1fVkBVzusWY1inT+ElND1dIXKvZe1VFumk2LJfHUu5CJPeMPPcNcgSgNLCMho0JcHvhftnE0hw==
+"@hemjs/needle@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@hemjs/needle/-/needle-1.2.1.tgz#cd74b34af3154c3bb0e5e34654f48d67a7307156"
+  integrity sha512-107ZkBI8S06UIdYsJv1bv5ijOBYOPFY6GIbK4Lzn2F0t0pONjXezmhM1f3rdYV/7bBg1OVJuBMJhI5KD2nx5vw==
 
 "@hemjs/notions@1.1.0":
   version "1.1.0"
