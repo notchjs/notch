@@ -32,7 +32,7 @@
     "@commitlint/config-conventional": "19.6.0",
     "@eslint/js": "^9.13.0",
     "@hemjs/needle": "1.2.2",
-    "@types/express": "5.0.0",
+    "@types/express": "4.17.21",
     "@types/jest": "29.5.14",
     "@types/node": "22.10.1",
     "@types/stoppable": "1.1.3",
