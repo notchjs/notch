@@ -584,10 +584,10 @@
   resolved "https://registry.npmjs.org/@hemjs/needle/-/needle-1.2.2.tgz"
   integrity sha512-SWJ2Jn/XYPFGJwFM/AUS8r1B0mOFyajvye4VuFBVZ9HYR/MsSWk8g6AMRNHIDGodH1OKU9xerbitKmlj4RkOnA==
 
-"@hemjs/notions@1.2.2":
-  version "1.2.2"
-  resolved "https://registry.npmjs.org/@hemjs/notions/-/notions-1.2.2.tgz"
-  integrity sha512-T9JBySoipmWU37GyVYqpIcW3+wdlI/dvdxQE69yP6BBpGz8oy8UYqSAU+L7y4u4idlfXGBqYz42ip8z1Na1rrQ==
+"@hemjs/notions@1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@hemjs/notions/-/notions-1.2.3.tgz#e6924c8447c389770929c717b30417d5bce69918"
+  integrity sha512-4bReIcypruuzZtB0NIdm/r7UhWdKOdcdpLJBDjCKkbbGP8OF4s9cvXs+8WaxuSEwjJAMBfEIiE2bz0EdWmu9/Q==
 
 "@humanfs/core@^0.19.1":
   version "0.19.1"
