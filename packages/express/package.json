@@ -1,6 +1,6 @@
 {
   "name": "@notchjs/express",
-  "version": "0.8.8",
+  "version": "0.8.9",
   "description": "A dependency injection based express adapter (Node.js)",
   "license": "MIT",
   "author": "Augustus Kamau",
