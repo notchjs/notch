@@ -1,6 +1,6 @@
 {
   "name": "@notchjs/core",
-  "version": "0.8.9",
+  "version": "0.9.0",
   "description": "A dependency injection based web framework (Node.js)",
   "license": "MIT",
   "author": "Augustus Kamau",
@@ -19,14 +19,14 @@
   },
   "dependencies": {
     "@hemjs/notions": "1.2.5",
-    "@notchjs/util": "^0.8.7",
+    "@notchjs/util": "^0.9.0",
     "iterare": "1.2.1",
     "tslib": "2.8.1"
   },
   "devDependencies": {
-    "@notchjs/express": "^0.8.9",
-    "@notchjs/http": "^0.8.7",
-    "@notchjs/types": "^0.8.0"
+    "@notchjs/express": "^0.9.0",
+    "@notchjs/http": "^0.9.0",
+    "@notchjs/types": "^0.9.0"
   },
   "homepage": "https://github.com/notchjs/notch",
   "bugs": {

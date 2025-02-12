@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/notchjs/notch/compare/v0.8.9...v0.9.0) (2025-02-12)
+
+### Features
+
+- **http:** add METHOD object ([32da01e](https://github.com/notchjs/notch/commit/32da01e0c3a321df6109a4558e41441383f28a96))
+
+### BREAKING CHANGES
+
+- **http:** drop enum Method in favor of METHOD object
+
 ## [0.8.7](https://github.com/notchjs/notch/compare/v0.8.6...v0.8.7) (2024-12-11)
 
 ### Bug Fixes
