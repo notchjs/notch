@@ -1,4 +1,7 @@
+import type { METHOD } from './method';
 import type { STATUS_CODE, STATUS_TEXT } from './status';
+
+export type Method = (typeof METHOD)[keyof typeof METHOD];
 
 /** An HTTP status code. */
 export type StatusCode = (typeof STATUS_CODE)[keyof typeof STATUS_CODE];
