@@ -591,10 +591,10 @@
   resolved "https://registry.yarnpkg.com/@hemjs/needle/-/needle-1.2.4.tgz#eede497a95c86bc0318f72b67638e539fab3cd88"
   integrity sha512-3dONPTNDyr/67dHnS77ZXstsTCB/4EMIy7Xf59OI1EAuFSRkPldnJrgiADReHfRy2q/AqYiDZ568G4CLNOVgpg==
 
-"@hemjs/notions@1.2.4":
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/@hemjs/notions/-/notions-1.2.4.tgz#e3dcc39b2a8fbaf54afef746590ed627e279888b"
-  integrity sha512-+9xMyTdebXrnxQOxG2wEQNw0Z1hclLNXCuKfY0yjA4g3SGdqFw+ni5LB3o8PVWvkStedwe8p5wP3tSawTTGULg==
+"@hemjs/notions@1.2.5":
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/@hemjs/notions/-/notions-1.2.5.tgz#032421808fda8283382fd5889d509574d672ce27"
+  integrity sha512-tM75rv9jOix7R2ipuT8thCCiPZe5L07B2FEyMGh3gudO+TSQa0Vj1LxS/KI9wisxKqY9LXU/n9v0MOVNkvgv9w==
 
 "@humanfs/core@^0.19.1":
   version "0.19.1"
