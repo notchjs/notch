@@ -10,4 +10,5 @@ test('METHOD', () => {
   expect(METHOD.Trace).toEqual('TRACE');
   expect(METHOD.Connect).toEqual('CONNECT');
   expect(METHOD.Options).toEqual('OPTIONS');
+  expect(METHOD.All).toEqual('ALL');
 });
