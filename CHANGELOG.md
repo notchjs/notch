@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.2](https://github.com/notchjs/notch/compare/v0.9.1...v0.9.2) (2025-03-17)
+
+### Bug Fixes
+
+- **deps:** update dependency @hemjs/notions to v1.2.6 ([a0ec48c](https://github.com/notchjs/notch/commit/a0ec48c8f18bdd722aeb1049bcb3c8736d40b90b))
+
 ## [0.9.1](https://github.com/notchjs/notch/compare/v0.9.0...v0.9.1) (2025-02-19)
 
 **Note:** Version bump only for package @notchjs/workspace
