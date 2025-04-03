@@ -34,7 +34,7 @@
     "@hemjs/needle": "1.2.6",
     "@types/express": "4.17.21",
     "@types/jest": "29.5.14",
-    "@types/node": "22.13.17",
+    "@types/node": "22.14.0",
     "@types/stoppable": "1.1.3",
     "@types/supertest": "6.0.3",
     "@typescript-eslint/eslint-plugin": "8.29.0",
