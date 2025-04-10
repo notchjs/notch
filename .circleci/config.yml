@@ -25,7 +25,7 @@ jobs:
   build:
     working_directory: ~/notch
     docker:
-      - image: cimg/node:22.13
+      - image: cimg/node:22.13.1
     steps:
       - checkout
       - *restore-cache
@@ -38,7 +38,7 @@ jobs:
   tests:
     working_directory: ~/notch
     docker:
-      - image: cimg/node:22.13
+      - image: cimg/node:22.13.1
     steps:
       - checkout
       - *restore-cache
