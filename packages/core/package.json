@@ -18,7 +18,7 @@
     "test": "jest --detectOpenHandles"
   },
   "dependencies": {
-    "@hemjs/notions": "1.2.6",
+    "@hemjs/notions": "1.2.7",
     "@notchjs/util": "^0.9.3",
     "iterare": "1.2.1",
     "tslib": "2.8.1"
