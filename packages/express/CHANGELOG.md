@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.4](https://github.com/notchjs/notch/compare/v0.9.3...v0.9.4) (2025-08-06)
+
+### Bug Fixes
+
+- **deps:** update dependency @hemjs/notions to v1.2.7 ([be52703](https://github.com/notchjs/notch/commit/be52703444d8269a332a45eb08538dde7dc4bcf1))
+
 ## [0.9.3](https://github.com/notchjs/notch/compare/v0.9.2...v0.9.3) (2025-03-18)
 
 **Note:** Version bump only for package @notchjs/express
