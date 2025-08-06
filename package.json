@@ -31,7 +31,7 @@
     "@commitlint/cli": "19.8.1",
     "@commitlint/config-conventional": "19.8.1",
     "@eslint/js": "^9.13.0",
-    "@hemjs/needle": "1.2.6",
+    "@hemjs/needle": "1.2.7",
     "@types/express": "4.17.23",
     "@types/jest": "30.0.0",
     "@types/node": "22.17.0",
