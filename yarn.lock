@@ -720,10 +720,10 @@
     "@eslint/core" "^0.15.1"
     levn "^0.4.1"
 
-"@hemjs/needle@1.2.6":
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/@hemjs/needle/-/needle-1.2.6.tgz#ea9848e481144b6146245e3dff951ab0a4c1bcef"
-  integrity sha512-nPakfZE0MjlDQNNhIVdZN+l8Hks+Ti9+uTu+QdjDk6+ZC1k5KxaBp6ti4Tu9MSEk02uXbsze3PX+ZJuV3wzt4g==
+"@hemjs/needle@1.2.7":
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/@hemjs/needle/-/needle-1.2.7.tgz#b26d7d4376eb65fb8558d0998a269bb2986344fb"
+  integrity sha512-owctVTcvaVBu96GjZXBfWBJEOTvzgvUGjl6WmWY3F/l7Q9+PA/1Cwb7Z/WUb9PJUg/IL65IpVUggxwaTel6r6g==
 
 "@hemjs/notions@1.2.7":
   version "1.2.7"
