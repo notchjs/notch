@@ -22,12 +22,17 @@
   resolved "https://registry.yarnpkg.com/@armscye/core/-/core-0.4.0.tgz#626cae83587c7d1bf74c64092d676561b5b1a576"
   integrity sha512-8UymNH9R3tC0b16928Jkj6lwiKCLBiIh6SSfJ3EVp/I0q9M1tTQCXO2hwuUgCbWP1ITcPPQIdoCpPNu44v8QDw==
 
-"@armscye/hooks@0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@armscye/hooks/-/hooks-0.7.0.tgz#12af504df2e5fb522bc3892e52bdbbc83b815e69"
-  integrity sha512-jLc/yetLLBFQCzYh+hfEAnT9L4sUuL7iDtP+usbahdlVe3Tz9xsPJx7sTbPwu7FVFeQZy9fUDCdqN1Y1iNocyg==
+"@armscye/core@^0.4.3":
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/@armscye/core/-/core-0.4.3.tgz#196edc71e6eef49cc1a1bcfbe0b79c23433efb3f"
+  integrity sha512-6JEZqK8sQp5tP3vRKicP/YsMN9Q40ejDUaknH0Apmt4FaeTQHHeBhX9JCDfRWsyfQ2m1aAtLiAjnQWL1r/7PCQ==
+
+"@armscye/hooks@0.7.4":
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/@armscye/hooks/-/hooks-0.7.4.tgz#e981aaa4bfc024a6f39a964d20803c7245026615"
+  integrity sha512-YN9UdeaOCerZbetPE/JG1IG0Divauu2iLT52G2Wm90YrzZzYH9XhxpISbfBDA7HI8bPyp80jRzw2baHjOLOHTQ==
   dependencies:
-    "@armscye/core" "^0.4.0"
+    "@armscye/core" "^0.4.3"
 
 "@armscye/logging@0.11.0":
   version "0.11.0"
