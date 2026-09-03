@@ -1,7 +1,7 @@
 import type { Container, Provider } from '@armscye/container';
 import type { Module } from '@armscye/module';
 import type { NotchMiddleware, ResponseGenerator } from '@notchjs/types';
-import * as express from 'express';
+import express from 'express';
 
 import { ERROR_HANDLER, ERROR_RESPONSE_GENERATOR } from './constants';
 import { ErrorHandlerHost } from './error-handler-host';
