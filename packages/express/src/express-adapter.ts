@@ -4,7 +4,7 @@ import * as https from 'node:https';
 import { isNil } from '@hemjs/notions';
 import type { HttpAdapter } from '@notchjs/types';
 import * as express from 'express';
-import * as stoppable from 'stoppable';
+import stoppable, { type StoppableServer } from 'stoppable';
 
 import type { AdapterEnvironment, ServeStaticOptions } from './interfaces';
 import type { MiddlewareProxy } from './middleware-proxy';
@@ -12,7 +12,7 @@ import type { HandlerArgument, PathArgument } from './types';
 
 export class ExpressAdapter implements HttpAdapter {
   protected httpServer!: http.Server | https.Server;
-  private _stoppable!: stoppable.StoppableServer;
+  private _stoppable!: StoppableServer;
   private readonly instance: express.Application;
   private readonly proxy: MiddlewareProxy;
   private readonly _environment: AdapterEnvironment;
