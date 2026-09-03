@@ -1,6 +1,6 @@
 import { Needle } from '@hemjs/needle';
 import { join } from 'path';
-import * as request from 'supertest';
+import request from 'supertest';
 
 import { ExpressAdapter, ExpressModule } from '../..';
 
