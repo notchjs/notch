@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.5](https://github.com/notchjs/notch/compare/v0.9.4...v0.9.5) (2026-09-03)
+
+### Bug Fixes
+
+- add esModuleInterop to tsconfig.build.json ([53035e4](https://github.com/notchjs/notch/commit/53035e4256b30ea72e5107f78054c9dea474a886))
+- **deps:** update dependency @hemjs/notions to v2 ([a867d29](https://github.com/notchjs/notch/commit/a867d29cd8e9c41ad765d60b4bd83df8c13ba29c))
+- **deps:** update dependency express to v4.22.1 ([8fc0b26](https://github.com/notchjs/notch/commit/8fc0b2690e7b396dc89c6452fead71df563da5f0))
+- **deps:** update dependency express to v4.22.2 ([636da0b](https://github.com/notchjs/notch/commit/636da0bf87e745db93b7b27678f7f0e514cca1b7))
+- update express import to default import syntax ([74eb385](https://github.com/notchjs/notch/commit/74eb38561ab0c99e2dd7a4fa039033250298c368))
+- update stoppable import to default import syntax ([307e06f](https://github.com/notchjs/notch/commit/307e06fb0262aad6afd6f4f07baff59eb372021c))
+- update supertest import to default import syntax ([8753803](https://github.com/notchjs/notch/commit/8753803288a24272be2f19c2643e5311185869d1))
+
 ## [0.9.4](https://github.com/notchjs/notch/compare/v0.9.3...v0.9.4) (2025-08-06)
 
 ### Bug Fixes
