@@ -46,7 +46,7 @@
     "eslint-plugin-simple-import-sort": "14.0.0",
     "husky": "9.1.7",
     "jest": "30.5.2",
-    "lerna": "10.0.1",
+    "lerna": "10.1.0",
     "lint-staged": "17.6.0",
     "prettier": "3.9.10",
     "supertest": "7.3.1",
