@@ -17,7 +17,12 @@
   dependencies:
     "@armscye/core" "^0.4.3"
 
-"@armscye/core@0.4.3", "@armscye/core@^0.4.3":
+"@armscye/core@0.4.4":
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/@armscye/core/-/core-0.4.4.tgz#032433a5b86a6d55c2eec9ceba1765e105736c77"
+  integrity sha512-2jyuHhbDLAF60hmaOKF4RTVBbz/PWGWoyP1+4rWAydamqVkohnO8E2t8Jzt42ZsvmhFlTRu1ahU/kfn6ugheiA==
+
+"@armscye/core@^0.4.3":
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/@armscye/core/-/core-0.4.3.tgz#196edc71e6eef49cc1a1bcfbe0b79c23433efb3f"
   integrity sha512-6JEZqK8sQp5tP3vRKicP/YsMN9Q40ejDUaknH0Apmt4FaeTQHHeBhX9JCDfRWsyfQ2m1aAtLiAjnQWL1r/7PCQ==
