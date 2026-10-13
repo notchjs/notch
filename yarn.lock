@@ -17,15 +17,20 @@
   dependencies:
     "@armscye/core" "^0.4.4"
 
-"@armscye/core@0.4.4", "@armscye/core@^0.4.4":
-  version "0.4.4"
-  resolved "https://registry.yarnpkg.com/@armscye/core/-/core-0.4.4.tgz#032433a5b86a6d55c2eec9ceba1765e105736c77"
-  integrity sha512-2jyuHhbDLAF60hmaOKF4RTVBbz/PWGWoyP1+4rWAydamqVkohnO8E2t8Jzt42ZsvmhFlTRu1ahU/kfn6ugheiA==
+"@armscye/core@0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@armscye/core/-/core-0.5.0.tgz#ddaa888356ee88686edca395be730917f32195dc"
+  integrity sha512-NGvrk6dDyZ6pJK1CSbSKOOQGyhi15xZbLOAOT6l4o96sGPWfOx7wN0MypI+DZ9nZW/y7geD0Pb6W08AuWPhCnQ==
 
 "@armscye/core@^0.4.3":
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/@armscye/core/-/core-0.4.3.tgz#196edc71e6eef49cc1a1bcfbe0b79c23433efb3f"
   integrity sha512-6JEZqK8sQp5tP3vRKicP/YsMN9Q40ejDUaknH0Apmt4FaeTQHHeBhX9JCDfRWsyfQ2m1aAtLiAjnQWL1r/7PCQ==
+
+"@armscye/core@^0.4.4":
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/@armscye/core/-/core-0.4.4.tgz#032433a5b86a6d55c2eec9ceba1765e105736c77"
+  integrity sha512-2jyuHhbDLAF60hmaOKF4RTVBbz/PWGWoyP1+4rWAydamqVkohnO8E2t8Jzt42ZsvmhFlTRu1ahU/kfn6ugheiA==
 
 "@armscye/hooks@0.7.4":
   version "0.7.4"
