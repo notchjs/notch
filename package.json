@@ -23,7 +23,7 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@armscye/container": "0.8.2",
+    "@armscye/container": "0.9.0",
     "@armscye/core": "0.6.0",
     "@armscye/hooks": "0.7.4",
     "@armscye/logging": "0.11.0",

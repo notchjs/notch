@@ -10,14 +10,14 @@
     "@jridgewell/gen-mapping" "^0.3.5"
     "@jridgewell/trace-mapping" "^0.3.24"
 
-"@armscye/container@0.8.2":
-  version "0.8.2"
-  resolved "https://registry.yarnpkg.com/@armscye/container/-/container-0.8.2.tgz#b33ed4387426807ed92b78b0dbb4eeb2d36ad961"
-  integrity sha512-Tu/LE3KBjuLLKg/fOsK8UqBA7CAkHaCFDWuwyixBelEpGGKIRLBO5/XMX5THcT4QEDndsXvdM7tmJrSTnTY2nA==
+"@armscye/container@0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@armscye/container/-/container-0.9.0.tgz#3c96ae2ff0e742cd16cff9b68b3661d7d5a7610c"
+  integrity sha512-5xLzT/WF5UBo2xbf+b+wY+/94Hyb3D5Do6i1iJe2DoMwiJUa8BZ9OMpelqLoYvqdFOcqlB7/HZqfr8Qju4IZFA==
   dependencies:
-    "@armscye/core" "^0.5.0"
+    "@armscye/core" "^0.6.0"
 
-"@armscye/core@0.6.0":
+"@armscye/core@0.6.0", "@armscye/core@^0.6.0":
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/@armscye/core/-/core-0.6.0.tgz#400e0ffdcc07fa4d1969e60e89209c0ae840d81a"
   integrity sha512-iDQmBuha80I1jcoJz8WpiMaOQqBuu8ZY0ysOpU3XnT9BBFEfmYbEE6lKEN0qLN0573zoVZshdAxcfZRp9Ex4hg==
@@ -26,11 +26,6 @@
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/@armscye/core/-/core-0.4.3.tgz#196edc71e6eef49cc1a1bcfbe0b79c23433efb3f"
   integrity sha512-6JEZqK8sQp5tP3vRKicP/YsMN9Q40ejDUaknH0Apmt4FaeTQHHeBhX9JCDfRWsyfQ2m1aAtLiAjnQWL1r/7PCQ==
-
-"@armscye/core@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@armscye/core/-/core-0.5.0.tgz#ddaa888356ee88686edca395be730917f32195dc"
-  integrity sha512-NGvrk6dDyZ6pJK1CSbSKOOQGyhi15xZbLOAOT6l4o96sGPWfOx7wN0MypI+DZ9nZW/y7geD0Pb6W08AuWPhCnQ==
 
 "@armscye/hooks@0.7.4":
   version "0.7.4"
