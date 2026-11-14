@@ -10,7 +10,7 @@
     "@jridgewell/gen-mapping" "^0.3.5"
     "@jridgewell/trace-mapping" "^0.3.24"
 
-"@armscye/container@0.9.0":
+"@armscye/container@0.9.0", "@armscye/container@^0.9.0":
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/@armscye/container/-/container-0.9.0.tgz#3c96ae2ff0e742cd16cff9b68b3661d7d5a7610c"
   integrity sha512-5xLzT/WF5UBo2xbf+b+wY+/94Hyb3D5Do6i1iJe2DoMwiJUa8BZ9OMpelqLoYvqdFOcqlB7/HZqfr8Qju4IZFA==
@@ -770,10 +770,12 @@
     "@eslint/core" "^1.2.1"
     levn "^0.4.1"
 
-"@hemjs/needle@1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@hemjs/needle/-/needle-1.3.0.tgz#139d322cd256f2a6a2f407a669e36ec250042827"
-  integrity sha512-TADIvpk0TsHO3SdO0yozsHpFaWlr7rPZ2O+bud6HHnny7chMn3bNLx+eOCbgYsqcO6CT2u/t5zczibkrPlxn7w==
+"@hemjs/needle@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@hemjs/needle/-/needle-2.0.0.tgz#5b9a71f6920425e11c1a3d3c59626ea62291df49"
+  integrity sha512-VQfFPjC9wrySMxA8yZ3LNDUrgpkSrt8pD9tARAXQkAGwSxKp5L42rM6kB+afJ9TaZ5/zTSQwCcGu2Y4yweTKKQ==
+  dependencies:
+    "@armscye/container" "^0.9.0"
 
 "@hemjs/notions@2.0.0":
   version "2.0.0"
