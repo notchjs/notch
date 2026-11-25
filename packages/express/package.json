@@ -18,7 +18,7 @@
     "test": "jest --detectOpenHandles"
   },
   "dependencies": {
-    "@hemjs/notions": "2.0.0",
+    "@hemjs/notions": "3.0.0",
     "@notchjs/http": "^0.9.5",
     "@notchjs/util": "^0.9.5",
     "express": "4.22.2",
